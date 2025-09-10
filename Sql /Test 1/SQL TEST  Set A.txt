@@ -1,0 +1,76 @@
+SQL TEST 
+HANSRAJ DINKAR PATIL
+SET  A
+
+Q1)->select name ,salary
+    from  employee
+    order by desc;
+
+Q2) -> select  name salary 
+    from employee  order by salary desc
+    limit 5;
+
+
+Q3)-> select * from employees
+      order by employee_id
+      limit 5 offsite 3;
+
+Q4)->select  employee count(*) as total_dept
+    from  dept 
+    group by employee;
+
+Q5)-> select employee, avg(salary) as avg_salary
+      from dept
+     group by employee
+     having avg(salary) > 50000;
+
+ Q6)->select name from product
+      where name like '%laptop%';
+
+Q7)-> select left (student_name, 1, 3) AS first_three_chars
+       from student;
+   
+Q8) -> Select * from student where name "%A";
+
+
+Q9)-> select date_formate (order_date, '%Y-%m') as month, count(*) as total_orders
+      from orders
+       group by date_formate(order_date, '%Y-%m') count(*) > 100;
+
+
+Q10)->select  category from  sales where sales > 1,00,000 select name from product
+      where name '%laptop%';
+
+  order by category;
+
+Q11) -> a) 
+
+Q12) -> b)
+
+Q13) -> d)
+
+Q14) -> b)
+
+Q15) -> b)
+
+
+
+Q16) ->  select c.region, sum(o.total_amount) as total_orders
+        from orders o
+        inner JOIN customers c 
+        on o.customer_id = c.customer_id
+        group by c.region
+        having sum(o.total_amount) > 10000;
+
+Q17) -> select b.author_id, sum(s.quantity) as total_books_sold
+       from books b
+       join sales s 
+       on b.book_id = s.book_id
+       group by b.author_id
+       having sum(s.quantity) > 100;
+
+
+
+
+
+   
